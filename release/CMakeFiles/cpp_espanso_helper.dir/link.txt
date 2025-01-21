@@ -1,0 +1,3 @@
+C:\Strawberry\c\bin\cmake.exe -E rm -f CMakeFiles\cpp_espanso_helper.dir/objects.a
+C:\Qt\Tools\mingw1120_64\bin\ar.exe qc CMakeFiles\cpp_espanso_helper.dir/objects.a @CMakeFiles\cpp_espanso_helper.dir\objects1.rsp
+C:\Qt\Tools\mingw1120_64\bin\c++.exe -mwindows -Wl,--whole-archive CMakeFiles\cpp_espanso_helper.dir/objects.a -Wl,--no-whole-archive -o cpp_espanso_helper.exe -Wl,--out-implib,libcpp_espanso_helper.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cpp_espanso_helper.dir\linkLibs.rsp

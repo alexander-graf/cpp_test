@@ -287,11 +287,16 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Strawberry/c/share/cmake-3.29/Modules/Platform/Windows-windres.cmake"
   "C:/Strawberry/c/share/cmake-3.29/Modules/Platform/Windows.cmake"
   "C:/Strawberry/c/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake"
-  "C:/Users/Administrator/Projects/cpp_test/CMakeLists.txt"
+  "C:/Users/Administrator/Projects/cpp_espanso_helper/CMakeLists.txt"
   "CMakeFiles/3.29.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.29.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.29.2/CMakeRCCompiler.cmake"
   "CMakeFiles/3.29.2/CMakeSystem.cmake"
+  "C:/Users/Administrator/Projects/cpp_espanso_helper/extern/lib/cmake/yaml-cpp/yaml-cpp-config-version.cmake"
+  "C:/Users/Administrator/Projects/cpp_espanso_helper/extern/lib/cmake/yaml-cpp/yaml-cpp-config.cmake"
+  "C:/Users/Administrator/Projects/cpp_espanso_helper/extern/lib/cmake/yaml-cpp/yaml-cpp-targets-noconfig.cmake"
+  "C:/Users/Administrator/Projects/cpp_espanso_helper/extern/lib/cmake/yaml-cpp/yaml-cpp-targets.cmake"
+  "C:/Users/Administrator/Projects/cpp_espanso_helper/resources.qrc"
   )
 
 # The corresponding makefile is:
@@ -308,14 +313,15 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.29.2/CMakeRCCompiler.cmake"
   "CMakeFiles/3.29.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.29.2/CMakeCXXCompiler.cmake"
-  "CMakeFiles/mein_gui_projekt_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/cpp_espanso_helper_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/cpp_espanso_helper_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json"
   ".qt/QtDeploySupport.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/mein_gui_projekt.dir/DependInfo.cmake"
-  "CMakeFiles/mein_gui_projekt_autogen_timestamp_deps.dir/DependInfo.cmake"
-  "CMakeFiles/mein_gui_projekt_autogen.dir/DependInfo.cmake"
+  "CMakeFiles/cpp_espanso_helper.dir/DependInfo.cmake"
+  "CMakeFiles/cpp_espanso_helper_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "CMakeFiles/cpp_espanso_helper_autogen.dir/DependInfo.cmake"
   )

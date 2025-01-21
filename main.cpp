@@ -1,18 +1,19 @@
-#include <QApplication>
 #include "mainwindow.h"
+#include <QApplication>
 
-#ifdef _WIN32
+#ifdef Q_OS_WIN
 #include <windows.h>
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
-{
-    int argc = 0;
-    char **argv = nullptr;
-#else
+#endif
+
 int main(int argc, char *argv[])
 {
+#ifdef Q_OS_WIN
+    // Versteckt das Konsolenfenster unter Windows
+    ShowWindow(GetConsoleWindow(), SW_HIDE);
 #endif
-    QApplication app(argc, argv);
-    MainWindow window;
-    window.show();
-    return app.exec();
+
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+    return a.exec();
 } 

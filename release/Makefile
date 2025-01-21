@@ -56,10 +56,10 @@ RM = C:\Strawberry\c\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Administrator\Projects\cpp_test
+CMAKE_SOURCE_DIR = C:\Users\Administrator\Projects\cpp_espanso_helper
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Administrator\Projects\cpp_test\build
+CMAKE_BINARY_DIR = C:\Users\Administrator\Projects\cpp_espanso_helper\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -84,11 +84,56 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	C:\Strawberry\c\bin\cmake.exe -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	C:\Strawberry\c\bin\cmake.exe -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	C:\Strawberry\c\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	C:\Strawberry\c\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	C:\Strawberry\c\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	C:\Strawberry\c\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\Projects\cpp_test\build\CMakeFiles C:\Users\Administrator\Projects\cpp_test\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\Projects\cpp_espanso_helper\build\CMakeFiles C:\Users\Administrator\Projects\cpp_espanso_helper\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\Projects\cpp_test\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\Projects\cpp_espanso_helper\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -116,50 +161,98 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named mein_gui_projekt
+# Target rules for targets named cpp_espanso_helper
 
 # Build rule for target.
-mein_gui_projekt: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 mein_gui_projekt
-.PHONY : mein_gui_projekt
+cpp_espanso_helper: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 cpp_espanso_helper
+.PHONY : cpp_espanso_helper
 
 # fast build rule for target.
-mein_gui_projekt/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mein_gui_projekt.dir\build.make CMakeFiles/mein_gui_projekt.dir/build
-.PHONY : mein_gui_projekt/fast
+cpp_espanso_helper/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_espanso_helper.dir\build.make CMakeFiles/cpp_espanso_helper.dir/build
+.PHONY : cpp_espanso_helper/fast
 
 #=============================================================================
-# Target rules for targets named mein_gui_projekt_autogen_timestamp_deps
+# Target rules for targets named cpp_espanso_helper_autogen_timestamp_deps
 
 # Build rule for target.
-mein_gui_projekt_autogen_timestamp_deps: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 mein_gui_projekt_autogen_timestamp_deps
-.PHONY : mein_gui_projekt_autogen_timestamp_deps
+cpp_espanso_helper_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 cpp_espanso_helper_autogen_timestamp_deps
+.PHONY : cpp_espanso_helper_autogen_timestamp_deps
 
 # fast build rule for target.
-mein_gui_projekt_autogen_timestamp_deps/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mein_gui_projekt_autogen_timestamp_deps.dir\build.make CMakeFiles/mein_gui_projekt_autogen_timestamp_deps.dir/build
-.PHONY : mein_gui_projekt_autogen_timestamp_deps/fast
+cpp_espanso_helper_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_espanso_helper_autogen_timestamp_deps.dir\build.make CMakeFiles/cpp_espanso_helper_autogen_timestamp_deps.dir/build
+.PHONY : cpp_espanso_helper_autogen_timestamp_deps/fast
 
 #=============================================================================
-# Target rules for targets named mein_gui_projekt_autogen
+# Target rules for targets named cpp_espanso_helper_autogen
 
 # Build rule for target.
-mein_gui_projekt_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 mein_gui_projekt_autogen
-.PHONY : mein_gui_projekt_autogen
+cpp_espanso_helper_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 cpp_espanso_helper_autogen
+.PHONY : cpp_espanso_helper_autogen
 
 # fast build rule for target.
-mein_gui_projekt_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mein_gui_projekt_autogen.dir\build.make CMakeFiles/mein_gui_projekt_autogen.dir/build
-.PHONY : mein_gui_projekt_autogen/fast
+cpp_espanso_helper_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_espanso_helper_autogen.dir\build.make CMakeFiles/cpp_espanso_helper_autogen.dir/build
+.PHONY : cpp_espanso_helper_autogen/fast
+
+cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.obj: cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.cpp.obj
+.PHONY : cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.obj
+
+# target to build an object file
+cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_espanso_helper.dir\build.make CMakeFiles/cpp_espanso_helper.dir/cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.cpp.obj
+.PHONY : cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.cpp.obj
+
+cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.i: cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.cpp.i
+.PHONY : cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.i
+
+# target to preprocess a source file
+cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_espanso_helper.dir\build.make CMakeFiles/cpp_espanso_helper.dir/cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.cpp.i
+.PHONY : cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.cpp.i
+
+cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.s: cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.cpp.s
+.PHONY : cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.s
+
+# target to generate assembly for a file
+cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_espanso_helper.dir\build.make CMakeFiles/cpp_espanso_helper.dir/cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.cpp.s
+.PHONY : cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.cpp.s
+
+cpp_espanso_helper_autogen/mocs_compilation.obj: cpp_espanso_helper_autogen/mocs_compilation.cpp.obj
+.PHONY : cpp_espanso_helper_autogen/mocs_compilation.obj
+
+# target to build an object file
+cpp_espanso_helper_autogen/mocs_compilation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_espanso_helper.dir\build.make CMakeFiles/cpp_espanso_helper.dir/cpp_espanso_helper_autogen/mocs_compilation.cpp.obj
+.PHONY : cpp_espanso_helper_autogen/mocs_compilation.cpp.obj
+
+cpp_espanso_helper_autogen/mocs_compilation.i: cpp_espanso_helper_autogen/mocs_compilation.cpp.i
+.PHONY : cpp_espanso_helper_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+cpp_espanso_helper_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_espanso_helper.dir\build.make CMakeFiles/cpp_espanso_helper.dir/cpp_espanso_helper_autogen/mocs_compilation.cpp.i
+.PHONY : cpp_espanso_helper_autogen/mocs_compilation.cpp.i
+
+cpp_espanso_helper_autogen/mocs_compilation.s: cpp_espanso_helper_autogen/mocs_compilation.cpp.s
+.PHONY : cpp_espanso_helper_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+cpp_espanso_helper_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_espanso_helper.dir\build.make CMakeFiles/cpp_espanso_helper.dir/cpp_espanso_helper_autogen/mocs_compilation.cpp.s
+.PHONY : cpp_espanso_helper_autogen/mocs_compilation.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mein_gui_projekt.dir\build.make CMakeFiles/mein_gui_projekt.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_espanso_helper.dir\build.make CMakeFiles/cpp_espanso_helper.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -167,7 +260,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mein_gui_projekt.dir\build.make CMakeFiles/mein_gui_projekt.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_espanso_helper.dir\build.make CMakeFiles/cpp_espanso_helper.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -175,7 +268,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mein_gui_projekt.dir\build.make CMakeFiles/mein_gui_projekt.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_espanso_helper.dir\build.make CMakeFiles/cpp_espanso_helper.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 mainwindow.obj: mainwindow.cpp.obj
@@ -183,7 +276,7 @@ mainwindow.obj: mainwindow.cpp.obj
 
 # target to build an object file
 mainwindow.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mein_gui_projekt.dir\build.make CMakeFiles/mein_gui_projekt.dir/mainwindow.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_espanso_helper.dir\build.make CMakeFiles/cpp_espanso_helper.dir/mainwindow.cpp.obj
 .PHONY : mainwindow.cpp.obj
 
 mainwindow.i: mainwindow.cpp.i
@@ -191,7 +284,7 @@ mainwindow.i: mainwindow.cpp.i
 
 # target to preprocess a source file
 mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mein_gui_projekt.dir\build.make CMakeFiles/mein_gui_projekt.dir/mainwindow.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_espanso_helper.dir\build.make CMakeFiles/cpp_espanso_helper.dir/mainwindow.cpp.i
 .PHONY : mainwindow.cpp.i
 
 mainwindow.s: mainwindow.cpp.s
@@ -199,32 +292,8 @@ mainwindow.s: mainwindow.cpp.s
 
 # target to generate assembly for a file
 mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mein_gui_projekt.dir\build.make CMakeFiles/mein_gui_projekt.dir/mainwindow.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cpp_espanso_helper.dir\build.make CMakeFiles/cpp_espanso_helper.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
-
-mein_gui_projekt_autogen/mocs_compilation.obj: mein_gui_projekt_autogen/mocs_compilation.cpp.obj
-.PHONY : mein_gui_projekt_autogen/mocs_compilation.obj
-
-# target to build an object file
-mein_gui_projekt_autogen/mocs_compilation.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mein_gui_projekt.dir\build.make CMakeFiles/mein_gui_projekt.dir/mein_gui_projekt_autogen/mocs_compilation.cpp.obj
-.PHONY : mein_gui_projekt_autogen/mocs_compilation.cpp.obj
-
-mein_gui_projekt_autogen/mocs_compilation.i: mein_gui_projekt_autogen/mocs_compilation.cpp.i
-.PHONY : mein_gui_projekt_autogen/mocs_compilation.i
-
-# target to preprocess a source file
-mein_gui_projekt_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mein_gui_projekt.dir\build.make CMakeFiles/mein_gui_projekt.dir/mein_gui_projekt_autogen/mocs_compilation.cpp.i
-.PHONY : mein_gui_projekt_autogen/mocs_compilation.cpp.i
-
-mein_gui_projekt_autogen/mocs_compilation.s: mein_gui_projekt_autogen/mocs_compilation.cpp.s
-.PHONY : mein_gui_projekt_autogen/mocs_compilation.s
-
-# target to generate assembly for a file
-mein_gui_projekt_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mein_gui_projekt.dir\build.make CMakeFiles/mein_gui_projekt.dir/mein_gui_projekt_autogen/mocs_compilation.cpp.s
-.PHONY : mein_gui_projekt_autogen/mocs_compilation.cpp.s
 
 # Help Target
 help:
@@ -233,19 +302,26 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
+	@echo ... install
+	@echo ... install/local
+	@echo ... install/strip
+	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... mein_gui_projekt_autogen
-	@echo ... mein_gui_projekt_autogen_timestamp_deps
-	@echo ... mein_gui_projekt
+	@echo ... cpp_espanso_helper_autogen
+	@echo ... cpp_espanso_helper_autogen_timestamp_deps
+	@echo ... cpp_espanso_helper
+	@echo ... cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.obj
+	@echo ... cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.i
+	@echo ... cpp_espanso_helper_autogen/EWIEGA46WW/qrc_resources.s
+	@echo ... cpp_espanso_helper_autogen/mocs_compilation.obj
+	@echo ... cpp_espanso_helper_autogen/mocs_compilation.i
+	@echo ... cpp_espanso_helper_autogen/mocs_compilation.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
 	@echo ... mainwindow.obj
 	@echo ... mainwindow.i
 	@echo ... mainwindow.s
-	@echo ... mein_gui_projekt_autogen/mocs_compilation.obj
-	@echo ... mein_gui_projekt_autogen/mocs_compilation.i
-	@echo ... mein_gui_projekt_autogen/mocs_compilation.s
 .PHONY : help
 
 

@@ -1,0 +1,11 @@
+prefix=C:/Users/Administrator/Projects/cpp_espanso_helper/extern
+exec_prefix=${prefix}
+includedir=C:/Users/Administrator/Projects/cpp_espanso_helper/extern/include
+libdir=C:/Users/Administrator/Projects/cpp_espanso_helper/extern/lib
+
+Name: Yaml-cpp
+Description: A YAML parser and emitter for C++
+Version: 0.8.0
+Requires:
+Libs: -L${libdir} -lyaml-cpp
+Cflags: -I${includedir}
